@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тортики & Тістечка</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+    }
+    header span {
+      color: crimson;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 10px;
+    }
+    .filters button {
+      padding: 10px;
+      border: 1px solid #aaa;
+      background: #f5f5f5;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .filters {
+        display: none; 
+      }
+      .gallery {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+        margin: 20px;
+      }
+    }
+
+
+    @media (min-width: 1025px) {
+      .filters {
+        display: none; 
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+        margin: 20px;
+      }
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 0;
+      }
+      .gallery .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+      }
+      .gallery .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+      }
+      .gallery .card p {
+        padding: 10px;
+        border-top: 1px solid #ddd;
+      }
+      .sidebar {
+        padding: 10px;
+        border-left: 1px solid #ddd;
+      }
+      .sidebar h4 {
+        margin-bottom: 10px;
+      }
+      .sidebar input {
+        width: 100%;
+        margin: 10px 0;
+      }
+      .sidebar button {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #aaa;
+        background: #f5f5f5;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      footer {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Тортики <span>&</span> Тістечка
+  </header>
+
+  <div class="filters">
+    <button>Пиріг</button>
+    <button>Тістечко</button>
+    <button>Рулет</button>
+    <button>Торт</button>
+    <button>Сирник</button>
+    <button>Скинути фільтр</button>
+  </div>
+
+  <div class="layout">
+    <div class="gallery">
+      <div class="card"><img src="https://klymovska.com/wp-content/uploads/2022/07/spruce-house.jpg" alt="Торт"><p>Торт: <span>Сметанковий</span></p></div>
+      <div class="card"><img src="https://tprestige.com/wp-content/uploads/2023/05/shokoladno-trufelnoe.jpg" alt="Тістечко"><p>Тістечко: <span>Маффін</span></p></div>
+      <div class="card"><img src="https://vip.shuvar.com/pub/media/catalog/product/2/6/26131534__large.jpg" alt="Сирники"><p>Сирники: <span>Три ягоди</span></p></div>
+      <div class="card"><img src="https://content3.flowwow-images.com/data/flowers/1000x1000/38/1720600418_7963038.jpg" alt="Торт"><p>Торт: <span>Смачний</span></p></div>
+      <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiTlx2qOGCyTNyBHDRzMEkzVtyopEhpSj32Q&s" alt="Рулет"><p>Рулет: <span>Святковий</span></p></div>
+      <div class="card"><img src="https://shuba.life/static/content/thumbs/1824x912/3/1b/ubn46v---c2x1x50px50p-up--0043caebbacc6cef656e27c32773b1b3.jpg" alt="Пиріг"><p>Пиріг: <span>Свято у бабусі</span></p></div>
+    </div>
+
+    <aside class="sidebar">
+      <h4>Фільтр</h4>
+      <p>Калорії у порції</p>
+      <input type="range" min="0" max="600">
+      <button>Пиріг</button>
+      <button>Тістечко</button>
+      <button>Рулет</button>
+      <button>Торт</button>
+      <button>Сирник</button>
+      <button>Скинути фільтр</button>
+    </aside>
+  </div>
+
+  <footer>
+    Контакти: <a href="mailto:tortik@smakota.ua">tortik@smakota.ua</a> © 2019 Smakota
+  </footer>
+</body>
+</html>
